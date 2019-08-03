@@ -1,4 +1,10 @@
-package BlockChainService.Transactions;
+package BlockChainService;
+
+
+
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class TransactionBlock {
     private String hash;
@@ -7,14 +13,22 @@ public class TransactionBlock {
     private String sender;
     private String recipient;
 
-    private String date;
+    private long time;
     private int amount;
 
-    public TransactionBlock(String previousHash, String sender, String recipient, String date, int amount){
+    public TransactionBlock(String previousHash, String sender, String recipient, int amount){
+        MessageDigest digest;
+        try {
+            digest = MessageDigest.getInstance("SHA-256");
+        }
+        catch(NoSuchAlgorithmException e){
+            System.out.println(e);
+        }
+        this.hash = org.apache.commons.codec.digest.DigestUtils.sha256Hex(stringText);
         this.previousHash = previousHash;
         this.sender = sender;
         this.recipient = recipient;
-        this.date = date;
+        this.time = System.currentTimeMillis();
         this.amount = amount;
     }
     public void manipulateHash(){

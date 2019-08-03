@@ -1,13 +1,11 @@
 package restAPI;
 
 //BlockChain Imports
-import BlockChainService.Transactions.TransactionBlock;
-import BlockChainService.Chain.TransactionChain;
+import BlockChainService.TransactionBlock;
 
 //SpringBoot imports
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.LinkedList;
 import java.util.List;
