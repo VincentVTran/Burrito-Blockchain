@@ -2,6 +2,7 @@ package restAPI;
 
 //BlockChain Imports
 import BlockChainService.Transactions.TransactionBlock;
+import BlockChainService.Chain.TransactionChain;
 
 //SpringBoot imports
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ import java.util.List;
 
 public class blockchainController {
 
-
+    //private TransactionChain
     @RequestMapping(method = RequestMethod.GET, value = "/transactions")
     public List<TransactionBlock> getAllTransactions(){
         return new LinkedList<TransactionBlock>();

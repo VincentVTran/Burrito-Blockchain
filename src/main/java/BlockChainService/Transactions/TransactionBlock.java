@@ -8,9 +8,9 @@ public class TransactionBlock {
     private String recipient;
 
     private String date;
-    private double amount;
+    private int amount;
 
-    public TransactionBlock(String previousHash, String sender, String recipient, String date, double amount){
+    public TransactionBlock(String previousHash, String sender, String recipient, String date, int amount){
         this.previousHash = previousHash;
         this.sender = sender;
         this.recipient = recipient;
@@ -61,11 +61,11 @@ public class TransactionBlock {
         this.date = date;
     }
 
-    public double getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 }

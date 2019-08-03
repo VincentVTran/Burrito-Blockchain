@@ -7,5 +7,7 @@ public class TransactionChain {
 
     LinkedList<TransactionBlock> chain = new LinkedList<TransactionBlock>();
 
-
+    public LinkedList<TransactionBlock> getAllTransactions(){
+        return chain;
+    }
 }
