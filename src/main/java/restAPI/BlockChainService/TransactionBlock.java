@@ -14,8 +14,8 @@ public class TransactionBlock {
 
     public TransactionBlock(int previousHash, String sender, String recipient, int amount){
         this.previousHash = previousHash;
-        this.sender = sender;
-        this.recipient = recipient;
+        this.sender = sender.replaceAll("-"," ");
+        this.recipient = recipient.replaceAll("-"," ");
         this.time = System.currentTimeMillis();
         this.amount = amount;
 
