@@ -1,4 +1,4 @@
-package restAPI;
+package restAPI.SpringBoot;
 
 //BlockChain Imports
 import restAPI.BlockChainService.TransactionBlock;
